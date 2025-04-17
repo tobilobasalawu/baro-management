@@ -91,6 +91,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Models.com Style Section */}
+      <section className="bg-white py-16 px-4 md:px-8">
+        {/* Top Navigation */}
+        <div className="container mx-auto mb-12">
+          <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-4">
+            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Models.</a>
+            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Creatives.</a>
+            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Fashion.</a>
+            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Beauty.</a>
+          </nav>
+        </div>
+
+        {/* Content Grid */}
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Left Column - Text Left, Image Right */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            {/* Text Content */}
+            <div className="w-full md:w-1/3 text-black order-2 md:order-1">
+              <p className="text-xs mb-1">News</p>
+              <h3 className="text-lg md:text-xl font-bold">Our talent rivals the industry’s best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
+            </div>
+            {/* Image Content */}
+            <div className="relative aspect-w-3 aspect-h-4 w-full md:w-2/3 order-1 md:order-2">
+              <Image 
+                src="/IMG_9085.jpg" 
+                alt="Cover" 
+                fill 
+                className="object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right Column - Text Left, Image Right */}
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+            {/* Text Content */}
+            <div className="w-full md:w-1/3 text-black order-2 md:order-1">
+              <h3 className="text-lg md:text-xl font-bold">Discover emerging talent that meets the highest industry standards—refined, reliable, and ready to bring your vision to life.</h3>
+            </div>
+            {/* Image Content */}
+            <div className="relative aspect-w-3 aspect-h-4 w-full md:w-2/3 order-1 md:order-2">
+              <Image 
+                src="/IMG_9061.jpg" 
+                alt="Model Ranking" 
+                fill 
+                className="object-cover"
+              />
+            </div>
+            {/* Optional caption below image - might need adjusting if used */}
+            {/* <p className="text-xs text-gray-600 mt-2 md:w-2/3 md:ml-auto order-3">Indiana Van't Slot in Top 50 Male Models</p> */}
+          </div>
+        </div>
+      </section>
     </>
   );
 }
