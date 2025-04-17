@@ -80,19 +80,21 @@ export default function Home() {
           )}
         </header>
 
-        {/* Main Content Area - Moved up further on mobile */}
-        <div className="absolute top-1/4 md:top-1/2 left-4 md:left-6 -translate-y-1/2 text-xs uppercase tracking-wider">
-          <div className="mb-2 text-black font-semibold">Discover The Roster</div>
-          <a href="#" className="block text-black hover:underline">Model</a>
-          <a href="#" className="block text-black hover:underline">Talent</a>
-          <a href="#" className="block text-black hover:underline">Creative</a>
-          <a href="#" className="block text-black hover:underline">Athlete</a>
+        {/* Main Content Area - Centered on mobile, left-aligned on desktop */}
+        <div className="absolute top-[20vh] md:top-1/2 left-1/2 md:left-6 -translate-x-1/2 md:-translate-x-0 -translate-y-1/2 text-xs uppercase tracking-wider text-center md:text-left w-full md:w-auto">
+          <div className="mb-4 text-black font-bold text-base">DISCOVER THE ROSTER</div>
+          <div className="flex flex-row md:flex-col items-center md:items-start justify-center space-x-4 md:space-x-0 md:space-y-2">
+            <a href="#" className="text-black hover:underline whitespace-nowrap">MODEL</a>
+            <a href="#" className="text-black hover:underline whitespace-nowrap">TALENT</a>
+            <a href="#" className="text-black hover:underline whitespace-nowrap">CREATIVE</a>
+            <a href="#" className="text-black hover:underline whitespace-nowrap">ATHLETE</a>
+          </div>
         </div>
 
       </main>
 
       {/* Image Gallery Section - responsive columns and gap */}
-      <section className="bg-white pt-10 px-4 md:px-0 md:pt-10">
+      <section className="bg-white pt-32 md:pt-20 px-4 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* First Image */}
           <div className="relative aspect-[3/4]">
