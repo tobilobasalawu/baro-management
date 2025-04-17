@@ -32,7 +32,7 @@ export default function Home() {
               <input 
                 type="text" 
                 placeholder="SEARCH" 
-                className="bg-white text-black placeholder-black text-xs uppercase tracking-wider focus:outline-none w-25 h-2"
+                className="bg-white text-black placeholder-black text-[9px] uppercase tracking-wider focus:outline-none w-25 h-2"
               />
               {/* Search Icon for Desktop */} 
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-black">
@@ -80,8 +80,8 @@ export default function Home() {
           )}
         </header>
 
-        {/* Main Content Area - Always visible on the left, adjusted positioning for smaller screens */}
-        <div className="absolute top-1/2 left-4 md:left-6 -translate-y-1/2 text-xs uppercase tracking-wider">
+        {/* Main Content Area - Moved up slightly on mobile */}
+        <div className="absolute top-1/3 md:top-1/2 left-4 md:left-6 -translate-y-1/2 text-xs uppercase tracking-wider">
           <div className="mb-2 text-black font-semibold">Discover The Roster</div>
           <a href="#" className="block text-black hover:underline">Model</a>
           <a href="#" className="block text-black hover:underline">Talent</a>
@@ -89,10 +89,6 @@ export default function Home() {
           <a href="#" className="block text-black hover:underline">Athlete</a>
         </div>
 
-        {/* Bottom Right Text - adjusted positioning */}
-        <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 text-xs uppercase tracking-wider">
-          Gigi Hadid C
-        </div>
       </main>
 
       {/* Image Gallery Section - responsive columns and gap */}
