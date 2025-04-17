@@ -5,6 +5,7 @@ import { useState } from 'react'; // Import useState
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar state
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false); // State for mobile search
 
   return (
     <>
@@ -20,9 +21,8 @@ export default function Home() {
 
         {/* Header */}
         <header className="absolute top-0 left-0 w-full p-4 md:p-6 flex flex-row justify-between items-center text-xs uppercase tracking-wider">
-          {/* Logo */} 
-          <div>
-            {/* Adjusted text size slightly for consistency across breakpoints */}
+          {/* Logo - Hidden on mobile when search is open */}
+          <div className={`${isMobileSearchOpen ? 'hidden' : 'block'} md:block`}>
             <span className="font-bold text-xl md:text-2xl text-black tracking-tighter">BARO MANAGEMENT</span>
           </div>
           
@@ -45,12 +45,14 @@ export default function Home() {
             </nav>
           </div>
 
-          {/* Mobile Icons */} 
-          <div className="flex md:hidden items-center space-x-4 text-black">
-            {/* Search Icon for Mobile */} 
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
+          {/* Mobile Icons - Hidden when search is open */} 
+          <div className={`flex md:hidden items-center space-x-4 text-black ${isMobileSearchOpen ? 'hidden' : 'flex'}`}>
+            {/* Search Icon for Mobile - Toggles search input */}
+            <button onClick={() => setIsMobileSearchOpen(true)} className="focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+              </svg>
+            </button>
             {/* Hamburger Menu Icon - Add onClick to open sidebar */}
             <button onClick={() => setIsSidebarOpen(true)} className="focus:outline-none">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -58,6 +60,24 @@ export default function Home() {
               </svg>
             </button>
           </div>
+          
+          {/* Mobile Search Input - Appears when isMobileSearchOpen is true */}
+          {isMobileSearchOpen && (
+            <div className="flex md:hidden items-center w-full bg-white p-2 absolute top-0 left-0 mt-2 mx-2 shadow-md">
+              <input 
+                type="text" 
+                placeholder="SEARCH..." 
+                className="flex-grow bg-transparent text-black placeholder-gray-500 text-sm focus:outline-none px-2"
+                autoFocus // Automatically focus the input when it appears
+              />
+              {/* Close Search Button */} 
+              <button onClick={() => setIsMobileSearchOpen(false)} className="ml-2 text-black focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          )}
         </header>
 
         {/* Main Content Area - Always visible on the left, adjusted positioning for smaller screens */}
