@@ -80,8 +80,8 @@ export default function Home() {
           )}
         </header>
 
-        {/* Main Content Area - Moved up slightly on mobile */}
-        <div className="absolute top-1/3 md:top-1/2 left-4 md:left-6 -translate-y-1/2 text-xs uppercase tracking-wider">
+        {/* Main Content Area - Moved up further on mobile */}
+        <div className="absolute top-1/4 md:top-1/2 left-4 md:left-6 -translate-y-1/2 text-xs uppercase tracking-wider">
           <div className="mb-2 text-black font-semibold">Discover The Roster</div>
           <a href="#" className="block text-black hover:underline">Model</a>
           <a href="#" className="block text-black hover:underline">Talent</a>
@@ -189,6 +189,7 @@ export default function Home() {
             <a href="#" className="block mb-0.5 hover:opacity-75">Instagram</a>
             <a href="#" className="block mb-0.5 hover:opacity-75">Facebook</a>
             <a href="#" className="block hover:opacity-75">X</a>
+            <a href="mailto:Barotalentmanagement@gmail.com" className="block hover:opacity-75">Email</a>
           </div>
         </div>
       </footer>
@@ -228,6 +229,7 @@ export default function Home() {
               <a href="#" className="block hover:opacity-75">Instagram</a>
               <a href="#" className="block hover:opacity-75">Facebook</a>
               <a href="#" className="block hover:opacity-75">X</a>
+              <a href="mailto:Barotalentmanagement@gmail.com" className="block hover:opacity-75">Email</a>
               <p className="text-gray-500 pt-4">Copyright 2025</p>
             </div>
           </div>
