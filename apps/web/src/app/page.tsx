@@ -175,17 +175,13 @@ export default function Home() {
           <div>
             <a href="#" className="block mb-0.5 hover:opacity-75">About Us</a>
             <a href="#" className="block mb-0.5 hover:opacity-75">Contact</a>
-            <a href="#" className="block mb-0.5 hover:opacity-75">Recruitment Warning</a>
-            <a href="#" className="block mb-0.5 hover:opacity-75">Do Not Sell My Personal Info</a>
-            <a href="#" className="block hover:opacity-75">Site Credits</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Privacy Policy</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Cookie Policy</a>
           </div>
           
           {/* Column 2 */}
           <div>
-            <a href="#" className="block mb-0.5 hover:opacity-75">Terms of Use</a>
-            <a href="#" className="block mb-0.5 hover:opacity-75">Privacy Policy</a>
-            <a href="#" className="block mb-0.5 hover:opacity-75">Cookie Policy</a>
-            <p className="text-gray-500 mt-4">Copyright Baro Management, Inc</p> {/* Adjusted styling for copyright */}
+            <p className="text-gray-500 mt-4">Copyright 2025</p> {/* Adjusted styling for copyright */}
           </div>
 
           {/* Column 3 */}
@@ -227,17 +223,12 @@ export default function Home() {
             <div className="text-xs uppercase tracking-wider space-y-2">
               <a href="#" className="block hover:opacity-75">About Us</a>
               <a href="#" className="block hover:opacity-75">Contact</a>
-              <a href="#" className="block hover:opacity-75">Recruitment Warning</a>
-              <a href="#" className="block hover:opacity-75">Do Not Sell My Personal Info</a>
-              <a href="#" className="block hover:opacity-75">Site Credits</a>
-              <a href="#" className="block hover:opacity-75">Terms of Use</a>
               <a href="#" className="block hover:opacity-75">Privacy Policy</a>
-              <a href="#" className="block hover:opacity-75">Cookie Policy</a>
-              <a href="#" className="block hover:opacity-75">Under 18 FAQs</a>
+              <br></br>
               <a href="#" className="block hover:opacity-75">Instagram</a>
               <a href="#" className="block hover:opacity-75">Facebook</a>
               <a href="#" className="block hover:opacity-75">X</a>
-              <p className="text-gray-500 pt-4">Copyright Baro Management, Inc</p>
+              <p className="text-gray-500 pt-4">Copyright 2025</p>
             </div>
           </div>
         </div>
