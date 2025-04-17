@@ -47,7 +47,7 @@ export default function Home() {
               </svg>
             </div>
             <nav className="flex space-x-4 text-black">
-              <a href="#" className="hover:underline">Directory</a>
+              <a href="/directory" className="hover:underline">Directory</a>
               <a href="#" className="hover:underline">Get Scouted</a>
             </nav>
           </div>
@@ -172,7 +172,6 @@ export default function Home() {
               />
             </div>
             {/* Optional caption below image - might need adjusting if used */}
-            {/* <p className="text-xs text-gray-600 mt-2 md:w-2/3 md:ml-auto order-3">Indiana Van't Slot in Top 50 Male Models</p> */}
           </div>
         </div>
       </section>
@@ -222,7 +221,7 @@ export default function Home() {
           {/* Top section: Sidebar Navigation */}
           <div> 
             <nav className="mt-10 flex flex-col space-y-4 text-sm uppercase tracking-wider">
-              <a href="#" className="hover:opacity-75">Directory</a>
+              <a href="/directory" className="hover:opacity-75">Directory</a>
               <a href="#" className="hover:opacity-75">Get Scouted</a>
             </nav>
           </div>
