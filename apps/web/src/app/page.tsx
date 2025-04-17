@@ -111,7 +111,7 @@ export default function Home() {
             {/* Text Content */}
             <div className="w-full md:w-1/3 text-black order-2 md:order-1">
               <p className="text-xs mb-1">News</p>
-              <h3 className="text-lg md:text-xl font-bold">Our talent rivals the industry’s best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
+              <h3 className="text-lg md:text-xl font-bold">Our talent rivals the industry's best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
             </div>
             {/* Image Content */}
             <div className="relative aspect-w-3 aspect-h-4 w-full md:w-2/3 order-1 md:order-2">
@@ -144,6 +144,35 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer className="bg-white py-16 px-4 md:px-8 text-black font-light">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[9px] uppercase tracking-wider">
+          {/* Column 1 */}
+          <div>
+            <a href="#" className="block mb-0.5 hover:opacity-75">About Us</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Contact</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Recruitment Warning</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Do Not Sell My Personal Info</a>
+            <a href="#" className="block hover:opacity-75">Site Credits</a>
+          </div>
+          
+          {/* Column 2 */}
+          <div>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Terms of Use</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Privacy Policy</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Cookie Policy</a>
+            <p className="text-gray-500 mt-4">Copyright IMG Worldwide, Inc</p> {/* Adjusted styling for copyright */}
+          </div>
+
+          {/* Column 3 */}
+          <div>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Instagram</a>
+            <a href="#" className="block mb-0.5 hover:opacity-75">Facebook</a>
+            <a href="#" className="block hover:opacity-75">X</a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
