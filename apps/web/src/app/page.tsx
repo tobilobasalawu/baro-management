@@ -80,14 +80,14 @@ export default function Home() {
           )}
         </header>
 
-        {/* Main Content Area - Centered on mobile, left-aligned on desktop */}
-        <div className="absolute top-[20vh] md:top-1/2 left-1/2 md:left-6 -translate-x-1/2 md:-translate-x-0 -translate-y-1/2 text-xs uppercase tracking-wider text-center md:text-left w-full md:w-auto">
-          <div className="mb-4 text-black font-bold text-base">DISCOVER THE ROSTER</div>
-          <div className="flex flex-row md:flex-col items-center md:items-start justify-center space-x-4 md:space-x-0 md:space-y-2">
-            <a href="#" className="text-black hover:underline whitespace-nowrap">MODEL</a>
-            <a href="#" className="text-black hover:underline whitespace-nowrap">TALENT</a>
-            <a href="#" className="text-black hover:underline whitespace-nowrap">CREATIVE</a>
-            <a href="#" className="text-black hover:underline whitespace-nowrap">ATHLETE</a>
+        {/* Main Content Area - Centered and horizontal on all screens */}
+        <div className="absolute top-[15vh] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs uppercase tracking-wider text-center w-full">
+          <div className="mb-4 text-black md:text-white font-bold text-base md:font-extrabold">DISCOVER THE ROSTER</div>
+          <div className="flex flex-row items-center justify-center space-x-4">
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">MODEL</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">TALENT</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">CREATIVE</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">ATHLETE</a>
           </div>
         </div>
 
@@ -121,7 +121,7 @@ export default function Home() {
       <section className="bg-white py-16 px-4 md:px-8">
         {/* Top Navigation */}
         <div className="container mx-auto mb-12">
-          <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-4">
+          <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-2">
             <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Models.</a>
             <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Creatives.</a>
             <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Fashion.</a>
