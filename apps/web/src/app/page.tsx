@@ -1,6 +1,11 @@
+'use client'; // Mark as Client Component
+
 import Image from "next/image";
+import { useState } from 'react'; // Import useState
 
 export default function Home() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar state
+
   return (
     <>
       <main className="relative min-h-screen w-full text-white">
@@ -46,10 +51,12 @@ export default function Home() {
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
-            {/* Hamburger Menu Icon */} 
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+            {/* Hamburger Menu Icon - Add onClick to open sidebar */}
+            <button onClick={() => setIsSidebarOpen(true)} className="focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            </button>
           </div>
         </header>
 
@@ -162,7 +169,7 @@ export default function Home() {
             <a href="#" className="block mb-0.5 hover:opacity-75">Terms of Use</a>
             <a href="#" className="block mb-0.5 hover:opacity-75">Privacy Policy</a>
             <a href="#" className="block mb-0.5 hover:opacity-75">Cookie Policy</a>
-            <p className="text-gray-500 mt-4">Copyright IMG Worldwide, Inc</p> {/* Adjusted styling for copyright */}
+            <p className="text-gray-500 mt-4">Copyright Baro Management, Inc</p> {/* Adjusted styling for copyright */}
           </div>
 
           {/* Column 3 */}
@@ -173,6 +180,60 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* Mobile Sidebar */} 
+      <div 
+        className={`fixed top-0 right-0 h-full w-64 bg-white text-black shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}
+      >
+        {/* Make inner container full height and flex column */}
+        <div className="p-4 flex flex-col h-full">
+          {/* Close Button (remains at top-right relative to sidebar) */}
+          <button 
+            onClick={() => setIsSidebarOpen(false)} 
+            className="absolute top-4 right-4 text-black focus:outline-none"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          
+          {/* Top section: Sidebar Navigation */}
+          <div> 
+            <nav className="mt-10 flex flex-col space-y-4 text-sm uppercase tracking-wider">
+              <a href="#" className="hover:opacity-75">Directory</a>
+              <a href="#" className="hover:opacity-75">Get Scouted</a>
+            </nav>
+          </div>
+
+          {/* Bottom section: Footer Links (pushed to bottom) */} 
+          <div className="mt-auto"> {/* Use mt-auto to push this block down */} 
+            <hr className="mb-6 border-gray-300" /> {/* Divider moved here */} 
+            <div className="text-xs uppercase tracking-wider space-y-2">
+              <a href="#" className="block hover:opacity-75">About Us</a>
+              <a href="#" className="block hover:opacity-75">Contact</a>
+              <a href="#" className="block hover:opacity-75">Recruitment Warning</a>
+              <a href="#" className="block hover:opacity-75">Do Not Sell My Personal Info</a>
+              <a href="#" className="block hover:opacity-75">Site Credits</a>
+              <a href="#" className="block hover:opacity-75">Terms of Use</a>
+              <a href="#" className="block hover:opacity-75">Privacy Policy</a>
+              <a href="#" className="block hover:opacity-75">Cookie Policy</a>
+              <a href="#" className="block hover:opacity-75">Under 18 FAQs</a>
+              <a href="#" className="block hover:opacity-75">Instagram</a>
+              <a href="#" className="block hover:opacity-75">Facebook</a>
+              <a href="#" className="block hover:opacity-75">X</a>
+              <p className="text-gray-500 pt-4">Copyright Baro Management, Inc</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Overlay for Sidebar */} 
+      {isSidebarOpen && (
+        <div 
+          onClick={() => setIsSidebarOpen(false)} 
+          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
+        ></div>
+      )}
     </>
   );
 }
