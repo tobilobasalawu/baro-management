@@ -23,7 +23,14 @@ export default function Home() {
         <header className="absolute top-0 left-0 w-full p-4 md:p-6 flex flex-row justify-between items-center text-xs uppercase tracking-wider">
           {/* Logo - Hidden on mobile when search is open */}
           <div className={`${isMobileSearchOpen ? 'hidden' : 'block'} md:block`}>
-            <span className="font-bold text-xl md:text-2xl text-black tracking-tighter">BARO MANAGEMENT</span>
+            <Image
+              src="/logo.png"
+              alt="BARO MANAGEMENT"
+              width={60}
+              height={60}
+              className="w-[40px] h-[40px] md:w-[100px] md:h-[90px] object-contain"
+              priority
+            />
           </div>
           
           {/* Desktop Search & Nav */}
@@ -35,7 +42,7 @@ export default function Home() {
                 className="bg-white text-black placeholder-black text-[9px] uppercase tracking-wider focus:outline-none w-25 h-2"
               />
               {/* Search Icon for Desktop */} 
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 text-black">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-black">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </div>
