@@ -95,9 +95,9 @@ export default function Home() {
 
       {/* Image Gallery Section - responsive columns and gap */}
       <section className="bg-white pt-32 md:pt-20 px-4 md:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* First Image */}
-          <div className="relative aspect-[4/5] md:aspect-[3/4]">
+          <div className="relative aspect-[3/4]">
             <Image
               src="/IMG_9072.jpg"
               alt="Model in floral dress"
@@ -106,7 +106,7 @@ export default function Home() {
             />
           </div>
           {/* Second Image */}
-          <div className="relative aspect-[4/5] md:aspect-[3/4]">
+          <div className="relative aspect-[3/4]">
             <Image
               src="/IMG_9092.jpg"
               alt="Model in casual wear"
@@ -120,7 +120,7 @@ export default function Home() {
       {/* Models.com Style Section */}
       <section className="bg-white py-16 px-4 md:px-8">
         {/* Top Navigation */}
-        <div className="container mx-auto mb-12 max-w-6xl">
+        <div className="container mx-auto mb-12">
           <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-2">
             <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">MODELS</a>
             <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">CREATIVES</a>
@@ -130,16 +130,16 @@ export default function Home() {
         </div>
 
         {/* Content Grid */}
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-6xl">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Left Column - Text Left, Image Right */}
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {/* Text Content */}
-            <div className="w-full md:w-2/3 text-black order-2 md:order-1">
+            <div className="w-full md:w-1/2 text-black order-2 md:order-1">
               <p className="text-xs md:text-sm mb-1">News</p>
               <h3 className="text-lg md:text-2xl font-bold">Our talent rivals the industry's best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
             </div>
             {/* Image Content */}
-            <div className="relative aspect-[3/4] w-full md:w-1/3 order-1 md:order-2">
+            <div className="relative aspect-w-3 aspect-h-4 w-full md:w-1/2 order-1 md:order-2">
               <Image 
                 src="/IMG_9085.jpg" 
                 alt="Cover" 
@@ -152,11 +152,11 @@ export default function Home() {
           {/* Right Column - Text Left, Image Right */}
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {/* Text Content */}
-            <div className="w-full md:w-2/3 text-black order-2 md:order-1">
+            <div className="w-full md:w-1/2 text-black order-2 md:order-1">
               <h3 className="text-lg md:text-2xl font-bold">Discover emerging talent that meets the highest industry standards—refined, reliable, and ready to bring your vision to life.</h3>
             </div>
             {/* Image Content */}
-            <div className="relative aspect-[3/4] w-full md:w-1/3 order-1 md:order-2">
+            <div className="relative aspect-w-3 aspect-h-4 w-full md:w-1/2 order-1 md:order-2">
               <Image 
                 src="/IMG_9061.jpg" 
                 alt="Model Ranking" 
