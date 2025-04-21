@@ -122,10 +122,10 @@ export default function Home() {
         {/* Top Navigation */}
         <div className="container mx-auto mb-12">
           <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-2">
-            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">MODELS.</a>
-            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">CREATIVES.</a>
-            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">FASHION.</a>
-            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">BEAUTY.</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">MODELS</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">CREATIVES</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">FASHION</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">BEAUTY</a>
           </nav>
         </div>
 
