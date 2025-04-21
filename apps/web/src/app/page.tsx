@@ -20,10 +20,10 @@ export default function Home() {
         />
 
         {/* Header */}
-        <header className="absolute top-0 left-0 w-full p-4 md:p-6 flex flex-row justify-between items-center text-xs uppercase tracking-wider">
+        <header className="absolute top-0 left-0 w-full p-4 md:p-6 flex flex-row justify-between items-center text-xs md:text-sm uppercase tracking-wider">
           {/* Logo - Hidden on mobile when search is open */}
           <div className={`${isMobileSearchOpen ? 'hidden' : 'block'} md:block`}>
-            <h1 className="text-black font-bold">Baro Management</h1>
+            <h1 className="text-black font-bold text-sm md:text-xl">Baro Management</h1>
           </div>
           
           {/* Desktop Search & Nav */}
@@ -32,14 +32,14 @@ export default function Home() {
               <input 
                 type="text" 
                 placeholder="SEARCH" 
-                className="bg-white text-black placeholder-black text-[9px] uppercase tracking-wider focus:outline-none w-25 h-2"
+                className="bg-white text-black placeholder-black text-[9px] md:text-xs uppercase tracking-wider focus:outline-none w-25 h-2"
               />
               {/* Search Icon for Desktop */} 
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 text-black">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </div>
-            <nav className="flex space-x-4 text-black">
+            <nav className="flex space-x-4 text-black text-sm md:text-base">
               <a href="/directory" className="hover:underline">Directory</a>
               <a href="#" className="hover:underline">Get Scouted</a>
             </nav>
@@ -81,13 +81,13 @@ export default function Home() {
         </header>
 
         {/* Main Content Area - Centered and horizontal on all screens */}
-        <div className="absolute top-[15vh] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs uppercase tracking-wider text-center w-full">
-          <div className="mb-4 text-black md:text-white font-bold text-base md:font-extrabold">DISCOVER THE ROSTER</div>
+        <div className="absolute top-[15vh] md:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm uppercase tracking-wider text-center w-full">
+          <div className="mb-4 text-black md:text-white font-bold text-base md:text-2xl md:font-extrabold">DISCOVER THE ROSTER</div>
           <div className="flex flex-row items-center justify-center space-x-4">
-            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">MODEL</a>
-            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">TALENT</a>
-            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">CREATIVE</a>
-            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap md:font-bold">ATHLETE</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap text-sm md:text-base md:font-bold">MODEL</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap text-sm md:text-base md:font-bold">TALENT</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap text-sm md:text-base md:font-bold">CREATIVE</a>
+            <a href="#" className="text-black md:text-white hover:underline whitespace-nowrap text-sm md:text-base md:font-bold">ATHLETE</a>
           </div>
         </div>
 
@@ -122,10 +122,10 @@ export default function Home() {
         {/* Top Navigation */}
         <div className="container mx-auto mb-12">
           <nav className="flex flex-wrap justify-around border-b border-gray-300 pb-2">
-            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Models.</a>
-            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Creatives.</a>
-            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Fashion.</a>
-            <a href="#" className="text-xl md:text-2xl font-serif text-black hover:opacity-75">Beauty.</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">Models.</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">Creatives.</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">Fashion.</a>
+            <a href="#" className="text-xl md:text-3xl font-serif text-black hover:opacity-75">Beauty.</a>
           </nav>
         </div>
 
@@ -135,8 +135,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {/* Text Content */}
             <div className="w-full md:w-1/3 text-black order-2 md:order-1">
-              <p className="text-xs mb-1">News</p>
-              <h3 className="text-lg md:text-xl font-bold">Our talent rivals the industry's best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
+              <p className="text-xs md:text-sm mb-1">News</p>
+              <h3 className="text-lg md:text-2xl font-bold">Our talent rivals the industry's best—exceptional models ready to elevate any project with professionalism, versatility & impact.</h3>
             </div>
             {/* Image Content */}
             <div className="relative aspect-w-3 aspect-h-4 w-full md:w-2/3 order-1 md:order-2">
@@ -153,7 +153,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-4 md:gap-6">
             {/* Text Content */}
             <div className="w-full md:w-1/3 text-black order-2 md:order-1">
-              <h3 className="text-lg md:text-xl font-bold">Discover emerging talent that meets the highest industry standards—refined, reliable, and ready to bring your vision to life.</h3>
+              <h3 className="text-lg md:text-2xl font-bold">Discover emerging talent that meets the highest industry standards—refined, reliable, and ready to bring your vision to life.</h3>
             </div>
             {/* Image Content */}
             <div className="relative aspect-w-3 aspect-h-4 w-full md:w-2/3 order-1 md:order-2">
@@ -164,14 +164,13 @@ export default function Home() {
                 className="object-cover"
               />
             </div>
-            {/* Optional caption below image - might need adjusting if used */}
           </div>
         </div>
       </section>
 
       {/* Footer Section */}
       <footer className="bg-white py-16 px-4 md:px-8 text-black font-light">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[9px] uppercase tracking-wider">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-[9px] md:text-xs uppercase tracking-wider">
           {/* Column 1 */}
           <div>
             <a href="#" className="block mb-0.5 hover:opacity-75">About Us</a>
