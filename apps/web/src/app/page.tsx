@@ -23,7 +23,7 @@ export default function Home() {
         <header className="absolute top-0 left-0 w-full p-4 md:p-6 flex flex-row justify-between items-center text-xs md:text-sm uppercase tracking-wider">
           {/* Logo - Hidden on mobile when search is open */}
           <div className={`${isMobileSearchOpen ? 'hidden' : 'block'} md:block`}>
-            <h1 className="text-black font-bold text-sm md:text-xl">Baro Management</h1>
+            <h1 className="text-black font-bold text-sm md:text-xl">Baro Talent Management</h1>
           </div>
           
           {/* Desktop Search & Nav */}
